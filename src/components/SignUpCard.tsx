@@ -24,7 +24,26 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSignInProvider = (value: "github" | "google") => {
+  const [error, setError] = useState("");
+  const [pending, setPending] = useState(false);
+
+  const onPasswordSignUp = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      setError("Password don't match.");
+      return;
+    }
+    setPending(true);
+    signIn("password", { email, password, flow: "signUp" })
+      .catch(() => {
+        setError("Something Went Wrong!");
+      })
+      .finally(() => {
+        setPending(false);
+      });
+  };
+
+  const handleSignUpProvider = (value: "github" | "google") => {
     signIn(value);
   };
   return (
@@ -36,9 +55,9 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-5 px-0 pb-0">
-        <form className="space-y-2.5">
+        <form onSubmit={onPasswordSignUp} className="space-y-2.5">
           <Input
-            disabled={false}
+            disabled={pending}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
@@ -46,7 +65,7 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
             required
           />
           <Input
-            disabled={false}
+            disabled={pending}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
@@ -54,14 +73,19 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
             required
           />
           <Input
-            disabled={false}
+            disabled={pending}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             type="password"
             placeholder="Confirm Passsword"
             required
           />
-          <Button type="submit" className="w-full" size={"lg"} disabled={false}>
+          <Button
+            type="submit"
+            className="w-full"
+            size={"lg"}
+            disabled={pending}
+          >
             Continue
           </Button>
         </form>
@@ -70,7 +94,7 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
           <Button
             disabled={false}
             onClick={() => {
-              handleSignInProvider("google");
+              handleSignUpProvider("google");
             }}
             variant="outline"
             size={"lg"}
@@ -82,7 +106,7 @@ const SignUpCard = ({ setState }: SignInCardProps) => {
           <Button
             disabled={false}
             onClick={() => {
-              handleSignInProvider("github");
+              handleSignUpProvider("github");
             }}
             variant="outline"
             size={"lg"}
