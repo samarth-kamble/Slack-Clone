@@ -1,7 +1,8 @@
-import AuthScreen from "@/components/AuthScreen";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import React from "react";
+import { useAuthActions } from "@convex-dev/auth/react";
 
-export default function Home() {
-  return <AuthScreen />;
-}
+const Home = () => {
+  return <div>Logged In !</div>;
+};
+
+export default Home;
