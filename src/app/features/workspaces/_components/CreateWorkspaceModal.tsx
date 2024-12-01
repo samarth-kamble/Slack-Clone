@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { toast } from "sonner";
 import { useCreateWorkspaceModal } from "../store/use-create-workspace-modal";
 import {
   Dialog,
@@ -32,6 +32,7 @@ const CreateWorkspaceModal = () => {
       { name },
       {
         onSuccess(id) {
+          toast.success("Workspace Created Successfully");
           router.push(`/workspaces/${id}`);
           handleClose();
         },
