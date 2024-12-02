@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
-import CreateWorkspaceModal from "./features/workspaces/_components/CreateWorkspaceModal";
+import CreateWorkspaceModal from "@/features/workspaces/_components/CreateWorkspaceModal";
 import Modals from "@/components/models";
 import { Toaster } from "@/components/ui/sonner";
 
