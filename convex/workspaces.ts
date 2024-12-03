@@ -14,7 +14,7 @@ export const create = mutation({
       throw new Error("User not found");
     }
 
-    // TODO: Create a proper methoid do
+    // TODO: Create a proper method do
     const jionCode = "12345";
     const workspaceId = await ctx.db.insert("workspaces", {
       name: args.name,

@@ -1,7 +1,7 @@
 import { atom, useAtom } from "jotai";
 
-const modalAtom = atom(false);
+const modelState = atom(false);
 
 export function useCreateWorkspaceModal() {
-  return useAtom(modalAtom);
+  return useAtom(modelState);
 }

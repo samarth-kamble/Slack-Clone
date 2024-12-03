@@ -27,7 +27,6 @@ const Home = () => {
 
   return (
     <div>
-      Logged In !
       <UserButton />
     </div>
   );
