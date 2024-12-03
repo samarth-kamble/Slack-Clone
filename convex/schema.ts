@@ -9,6 +9,14 @@ const schema = defineSchema({
     userId: v.string(),
     jionCode: v.string(),
   }),
+  members: defineTable({
+    userId: v.string(),
+    workspaceId: v.id("workspaces"),
+    role: v.union(v.literal("admin"), v.literal("member"))
+  })
+      .index("by_user_id",["userId"])
+      .index("by_workspace_id",["workspaceId"])
+      .index("by_workspace_id_user_id", ["workspaceId","userId"])
 });
 
 export default schema;

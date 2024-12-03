@@ -8,16 +8,16 @@ interface WorkspaceLyoutProps {
   children: React.ReactNode;
 }
 
-const WorkspaceLyout = ({ children }: WorkspaceLyoutProps) => {
+const WorkspaceLayout = ({ children }: WorkspaceLyoutProps) => {
   return (
-    <div className="h-full">
-      <Toolbar />
-      <div className="flex h-[calc(100vh-40px)]">
-        <Sidebar />
-        {children}
+      <div className="h-full">
+          <Toolbar/>
+          <div className="flex h-[calc(100vh-40px)]">
+              <Sidebar/>
+              {children}
+          </div>
       </div>
-    </div>
   );
 };
 
-export default WorkspaceLyout;
+export default WorkspaceLayout;
