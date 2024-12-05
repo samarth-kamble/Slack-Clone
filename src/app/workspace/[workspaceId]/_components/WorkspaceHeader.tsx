@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {ChevronDown, ListFilter, SquarePen} from "lucide-react";
 
 import {
@@ -11,6 +11,7 @@ import {
 import Hint from "@/components/Hint"
 import {Button} from "@/components/ui/button";
 import {Doc} from "../../../../../convex/_generated/dataModel";
+import {PreferencesModal} from "@/app/workspace/[workspaceId]/_components/PreferencesModal";
 
 
 interface WorkspaceHeaderProps {
@@ -19,8 +20,11 @@ interface WorkspaceHeaderProps {
 }
 
 const WorkspaceHeader = ({workspace,isAdmin}:WorkspaceHeaderProps) => {
+    const [preferencesOpen, setPreferencesOpen] = useState(false);
     return (
-        <div className={"flex items-center justify-between px-4 h-[49px] gap-0.5"}>
+        <>
+            <PreferencesModal open={preferencesOpen} setOpen={setPreferencesOpen} initialValue={workspace.name}/>
+            <div className={"flex items-center justify-between px-4 h-[49px] gap-0.5"}>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button
@@ -52,7 +56,7 @@ const WorkspaceHeader = ({workspace,isAdmin}:WorkspaceHeaderProps) => {
                                     Invite People to {workspace.name}
                                 </DropdownMenuItem>
                                 <DropdownMenuSeparator />
-                                <DropdownMenuItem className={"cursor-pointer py-2"} onClick={()=>{}}>
+                                <DropdownMenuItem className={"cursor-pointer py-2"} onClick={()=>setPreferencesOpen(true)}>
                                     Preferences
                                 </DropdownMenuItem>
                             </>
@@ -74,6 +78,7 @@ const WorkspaceHeader = ({workspace,isAdmin}:WorkspaceHeaderProps) => {
                 </Hint>
             </div>
         </div>
+        </>
     )
 }
 export default WorkspaceHeader
