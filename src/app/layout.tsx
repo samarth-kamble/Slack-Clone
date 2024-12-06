@@ -5,7 +5,7 @@ import "./globals.css";
 
 import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
-import Modals from "@/components/models";
+import Modals from "@/components/modals";
 import { Toaster } from "@/components/ui/sonner";
 import JotaiProvider from "@/components/providers/JotaiProvider";
 
