@@ -24,7 +24,6 @@ export const create = mutation({
       throw new Error("User not found");
     }
 
-    // TODO: Create a proper method do
     const jionCode = generateCode();
     const workspaceId = await ctx.db.insert("workspaces", {
       name: args.name,
@@ -36,6 +35,11 @@ export const create = mutation({
       userId,
       workspaceId,
       role: "admin"
+    })
+
+    await ctx.db.insert("channels",{
+      name:"general",
+      workspaceId
     })
 
     return workspaceId;

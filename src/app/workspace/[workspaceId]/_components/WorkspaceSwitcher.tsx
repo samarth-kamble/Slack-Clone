@@ -1,7 +1,7 @@
 import { Loader, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { useGetWorkspace } from "@/features/workspaces/api/use-getworkspace";
+import { useGetWorkspace } from "@/features/workspaces/api/use-get-workspace";
 import { useGetWorkspaces } from "@/features/workspaces/api/use-get-workspaces";
 import { useCreateWorkspaceModal } from "@/features/workspaces/store/use-create-workspace-modal";
 
