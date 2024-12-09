@@ -1,0 +1,10 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <g transform="rotate(165 25 25)">
+    <!-- Vertical hash lines -->
+    <rect x="13" y="2" width="8" height="46" rx="4" fill="rgba(230, 25, 109, 0.75)" />
+    <rect x="29" y="2" width="8" height="46" rx="4" fill="rgba(230, 25, 109, 0.75)" />
+    <!-- Horizontal hash lines -->
+    <rect x="2" y="13" width="46" height="8" rx="4" fill="#E6196D" />
+    <rect x="2" y="29" width="46" height="8" rx="4" fill="#E6196D" />
+  </g>
+</svg>
