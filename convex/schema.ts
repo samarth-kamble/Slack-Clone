@@ -9,6 +9,7 @@ const schema = defineSchema({
     userId: v.string(),
     jionCode: v.string(),
   }),
+
   members: defineTable({
     userId: v.id("users"),
     workspaceId: v.id("workspaces"),
@@ -22,6 +23,17 @@ const schema = defineSchema({
     name: v.string(),
     workspaceId: v.id("workspaces"),
   }).index("by_workspace_id", ["workspaceId"]),
+
+  messages: defineTable({
+    body: v.string(),
+    image: v.optional(v.id("_storage")),
+    memberId: v.id("members"),
+    workspaceId: v.id("workspaces"),
+    channelId: v.id("channels"),
+    parentMessageId: v.optional(v.id("messages")),
+    // TODO: Add a conversationId
+    updatedAt: v.number(),
+  }),
 });
 
 export default schema;
