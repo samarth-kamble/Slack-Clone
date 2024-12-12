@@ -31,10 +31,10 @@ const schema = defineSchema({
     image: v.optional(v.id("_storage")),
     memberId: v.id("members"),
     workspaceId: v.id("workspaces"),
-    channelId: v.id("channels"),
+    channelId: v.optional(v.id("channels")),
     parentMessageId: v.optional(v.id("messages")),
     conversationId: v.optional(v.id("conversations")),
-    updatedAt: v.number(),
+    updatedAt: v.optional(v.number()),
   })
     .index("by_workspace_id", ["workspaceId"])
     .index("by_member_id", ["memberId"])
