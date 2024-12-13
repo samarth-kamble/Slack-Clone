@@ -38,22 +38,22 @@ In this Project create an end-to-end fullstack and real-time slack clone, all wi
 - Vercel
 
 ## <a name="features">🔋 Features</a>
-📡 Real time communication
-👍 Reactions to messages
-🧵 Threads / Replies system
-✏️ Editing messages
-🗑️ Deleting messages
-🔐 Role based access control
-🖼️ Image attachments
-🔒 Authentication with Next auth v5
-📺 Channel creation
-🏢 Workspace creation
-✉️ Invite system / Invite codes
-💬 Direct messaging
-👥 User profiles
-⚛️ Framework Next.js 14
-🚀 Deployment on Vercel
-🎨 ShadCN UI & Tailwind CSS
+- 📡 Real time communication
+- 👍 Reactions to messages
+- 🧵 Threads / Replies system
+- ✏️ Editing messages
+- 🗑️ Deleting messages
+- 🔐 Role based access control
+- 🖼️ Image attachments
+- 🔒 Authentication with Next auth v5
+- 📺 Channel creation
+- 🏢 Workspace creation
+- ✉️ Invite system / Invite codes
+- 💬 Direct messaging
+- 👥 User profiles
+- ⚛️ Framework Next.js 14
+- 🚀 Deployment on Vercel
+- 🎨 ShadCN UI & Tailwind CSS
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
