@@ -12,7 +12,7 @@ import {
 import { usePanel } from "@/hooks/use-pannel";
 
 import Sidebar from "./_components/Sidebar";
-import Toolbar from "./_components/Toolbar";
+import {Toolbar} from "./_components/Toolbar";
 import { WorkspaceSidebar } from "./_components/WorkspaceSidebar";
 
 import { Id } from "../../../../convex/_generated/dataModel";
