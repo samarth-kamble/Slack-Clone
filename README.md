@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://github.com/samarth-kamble" target="_blank">
-      <img src="./public/Banner Readme .png" alt="Project Banner">
+       <img src="https://ubwp.buffalo.edu/happe/wp-content/uploads/sites/92/2019/12/slack_logo.png" alt="logo" width="200" height="auto" />
     </a>
   <br />
 
@@ -9,6 +9,8 @@
     <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Next_._JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-ShadCN_UI-black?style=for-the-badge&logoColor=white&logo=shadcnui&color=000000" alt="shadcnui" />
+    <img src="https://img.shields.io/badge/-React-black?style=for-the-badge&logoColor=%2361DAFB&logo=react&color=20232a" alt="react" />
   </div>
 
 <h3 align="center">Slack Clone</h3>
@@ -20,6 +22,38 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
+
+
+## <a name="introduction">🤖 Introduction</a>
+In this Project create an end-to-end fullstack and real-time slack clone, all with workspaces, channels, 1:1 conversations, threads, reactions, editing and deleting messages as well as member roles.
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Convex
+- Convex Auth
+- React.js
+- Next Auth
+- Vercel
+
+## <a name="features">🔋 Features</a>
+📡 Real time communication
+👍 Reactions to messages
+🧵 Threads / Replies system
+✏️ Editing messages
+🗑️ Deleting messages
+🔐 Role based access control
+🖼️ Image attachments
+🔒 Authentication with Next auth v5
+📺 Channel creation
+🏢 Workspace creation
+✉️ Invite system / Invite codes
+💬 Direct messaging
+👥 User profiles
+⚛️ Framework Next.js 14
+🚀 Deployment on Vercel
+🎨 ShadCN UI & Tailwind CSS
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
